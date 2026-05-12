@@ -26,4 +26,5 @@ while True:
     except Exception as e:
         print("Error reading DHT22:", str(e))
 
+    
     time.sleep(300)
