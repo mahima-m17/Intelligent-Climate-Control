@@ -39,3 +39,5 @@ to compare current environmental conditions with historical crop datasets and re
 - OpenWeather API
 ## System Architecture
 DHT22 Sensor → Raspberry Pi Pico W → Node.js Backend → SQLite Database → Recommendation Engine → React Dashboard
+## Project Structure
+
