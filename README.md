@@ -19,3 +19,23 @@ The crop recommendation engine uses:
 - Cosine Similarity
 
 to compare current environmental conditions with historical crop datasets and recommend the most suitable crops.
+## Tech Stack
+### 🎨 Frontend
+- React.js
+- Tailwind CSS
+- JavaScript
+### ⚙️ Backend
+- Node.js
+- Express.js
+### 🗄️ Database
+- SQLite
+### 🔌 Hardware
+- Raspberry Pi Pico W
+- DHT22 Sensor
+### 📚 Libraries & APIs
+- Axios
+- CSV Parser
+- QRCode Generator
+- OpenWeather API
+## System Architecture
+DHT22 Sensor → Raspberry Pi Pico W → Node.js Backend → SQLite Database → Recommendation Engine → React Dashboard
