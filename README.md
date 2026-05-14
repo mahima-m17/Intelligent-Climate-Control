@@ -40,4 +40,93 @@ to compare current environmental conditions with historical crop datasets and re
 ## System Architecture
 DHT22 Sensor → Raspberry Pi Pico W → Node.js Backend → SQLite Database → Recommendation Engine → React Dashboard
 ## Project Structure
+```bash
+Intelligent-Climate-Control/
+│
+├── weather-server/
+│   ├── server.js
+│   ├── cropRecommendation.js
+│   ├── deviceServer.js
+│   ├── insertCSVDataIntoDB.js
+│   ├── connecteddevices.js
+│   ├── database.db
+│   ├── Crop_recommendation.csv
+│   └── package.json
+│
+├── pico_code.py
+├── README.md
+└── .gitignore
+```
+# ⚡ Installation & Setup
 
+## 📥 Clone Repository
+
+```bash
+git clone https://github.com/your-username/intelligent-climate-control.git
+
+cd intelligent-climate-control
+```
+
+---
+
+# 🔧 Backend Setup
+
+```bash
+cd weather-server
+
+npm install
+```
+
+---
+
+# ▶️ Run Server
+
+```bash
+npm start
+```
+
+Server runs on:
+
+```bash
+http://localhost:5000
+```
+
+---
+
+# 🔑 Environment Variables
+
+Create a `.env` file inside the `weather-server/` directory.
+
+```env
+WEATHER_API_KEY=your_openweather_api_key
+PORT=5000
+```
+
+---
+
+# 🔌 Raspberry Pi Pico Setup
+
+Upload the `pico_code.py` file to the Raspberry Pi Pico W using Thonny IDE.
+
+Install the required MicroPython libraries:
+
+```python
+import machine
+import dht
+import requests
+```
+
+Connect:
+- DHT22 Sensor
+- Wi-Fi enabled Raspberry Pi Pico W
+
+Then run:
+
+```python
+pico_code.py
+```
+
+The Pico W will:
+- Read temperature and humidity
+- Send sensor data to backend APIs
+- Push updates every 5 minutes
